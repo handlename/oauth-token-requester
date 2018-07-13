@@ -10,6 +10,11 @@ import (
 )
 
 var serviceProviders = map[string]*oauth.ServiceProvider{
+	"hatena": &oauth.ServiceProvider{
+		RequestTokenUrl:   "https://www.hatena.com/oauth/initiate",
+		AuthorizeTokenUrl: "https://www.hatena.ne.jp/oauth/authorize",
+		AccessTokenUrl:    "https://www.hatena.com/oauth/token",
+	},
 	"twitter": &oauth.ServiceProvider{
 		RequestTokenUrl:   "https://api.twitter.com/oauth/request_token",
 		AuthorizeTokenUrl: "https://api.twitter.com/oauth/authorize",
